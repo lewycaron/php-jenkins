@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  jenkins:
+    image: kauanvalle/jenkins-php:1.0.3
+    privileged: true
+    user: root
+    ports:
+      - 9080:8080
+    container_name: jenkinscurso
+    volumes:
+      - /Users/kauanvallesantos/jenkins_compose/jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
